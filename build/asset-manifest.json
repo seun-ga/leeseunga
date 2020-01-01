@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/leeseunga.portfolio/static/css/main.3d23f09b.chunk.css",
-    "main.js": "/leeseunga.portfolio/static/js/main.cd18b7b2.chunk.js",
-    "main.js.map": "/leeseunga.portfolio/static/js/main.cd18b7b2.chunk.js.map",
-    "runtime-main.js": "/leeseunga.portfolio/static/js/runtime-main.3df533f9.js",
-    "runtime-main.js.map": "/leeseunga.portfolio/static/js/runtime-main.3df533f9.js.map",
-    "static/js/2.40dda1c2.chunk.js": "/leeseunga.portfolio/static/js/2.40dda1c2.chunk.js",
-    "static/js/2.40dda1c2.chunk.js.map": "/leeseunga.portfolio/static/js/2.40dda1c2.chunk.js.map",
-    "index.html": "/leeseunga.portfolio/index.html",
-    "precache-manifest.42558b172ba05c2c67e3b84cc4007977.js": "/leeseunga.portfolio/precache-manifest.42558b172ba05c2c67e3b84cc4007977.js",
-    "service-worker.js": "/leeseunga.portfolio/service-worker.js",
-    "static/css/main.3d23f09b.chunk.css.map": "/leeseunga.portfolio/static/css/main.3d23f09b.chunk.css.map",
-    "static/media/MissionOffice.png": "/leeseunga.portfolio/static/media/MissionOffice.b6791547.png",
-    "static/media/gudpan_main.png": "/leeseunga.portfolio/static/media/gudpan_main.6eb44ce5.png",
-    "static/media/gudpan_sub.png": "/leeseunga.portfolio/static/media/gudpan_sub.87ea7c5c.png",
-    "static/media/mars.png": "/leeseunga.portfolio/static/media/mars.b91fcb0c.png",
-    "static/media/next_icon.png": "/leeseunga.portfolio/static/media/next_icon.1263255d.png",
-    "static/media/overthinking_main.jpg": "/leeseunga.portfolio/static/media/overthinking_main.ab2d2344.jpg",
-    "static/media/previous_icon.png": "/leeseunga.portfolio/static/media/previous_icon.8d6449f5.png",
-    "static/media/stack.jpg": "/leeseunga.portfolio/static/media/stack.0c675901.jpg"
+    "main.css": "/leeseunga/static/css/main.3d23f09b.chunk.css",
+    "main.js": "/leeseunga/static/js/main.7c84114f.chunk.js",
+    "main.js.map": "/leeseunga/static/js/main.7c84114f.chunk.js.map",
+    "runtime-main.js": "/leeseunga/static/js/runtime-main.7468193e.js",
+    "runtime-main.js.map": "/leeseunga/static/js/runtime-main.7468193e.js.map",
+    "static/js/2.40dda1c2.chunk.js": "/leeseunga/static/js/2.40dda1c2.chunk.js",
+    "static/js/2.40dda1c2.chunk.js.map": "/leeseunga/static/js/2.40dda1c2.chunk.js.map",
+    "index.html": "/leeseunga/index.html",
+    "precache-manifest.860188f4af57da1e168724a229cae801.js": "/leeseunga/precache-manifest.860188f4af57da1e168724a229cae801.js",
+    "service-worker.js": "/leeseunga/service-worker.js",
+    "static/css/main.3d23f09b.chunk.css.map": "/leeseunga/static/css/main.3d23f09b.chunk.css.map",
+    "static/media/MissionOffice.png": "/leeseunga/static/media/MissionOffice.b6791547.png",
+    "static/media/gudpan_main.png": "/leeseunga/static/media/gudpan_main.6eb44ce5.png",
+    "static/media/gudpan_sub.png": "/leeseunga/static/media/gudpan_sub.87ea7c5c.png",
+    "static/media/mars.png": "/leeseunga/static/media/mars.b91fcb0c.png",
+    "static/media/next_icon.png": "/leeseunga/static/media/next_icon.1263255d.png",
+    "static/media/overthinking_main.jpg": "/leeseunga/static/media/overthinking_main.ab2d2344.jpg",
+    "static/media/previous_icon.png": "/leeseunga/static/media/previous_icon.8d6449f5.png",
+    "static/media/stack.jpg": "/leeseunga/static/media/stack.0c675901.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.3df533f9.js",
+    "static/js/runtime-main.7468193e.js",
     "static/js/2.40dda1c2.chunk.js",
     "static/css/main.3d23f09b.chunk.css",
-    "static/js/main.cd18b7b2.chunk.js"
+    "static/js/main.7c84114f.chunk.js"
   ]
 }
