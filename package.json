@@ -2,7 +2,7 @@
   "homepage": "https://seun-ga.github.io/leeseunga/",
   "name": "my-app",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "node-sass": "^4.13.0",
     "react": "^16.12.0",
