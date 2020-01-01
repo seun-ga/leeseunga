@@ -1,0 +1,29 @@
+
+
+#main-image{
+  position: absolute;
+  left: 45%;
+  right: 45%;
+  top: 20%;
+  bottom: 30%;
+  font-size: 30px;
+  color: red;
+  align-content: center;
+}
+
+#circleText{
+position: absolute;
+top:50%;
+left: 50%;
+color: white;
+transform: translate(-50%,50%);
+font-size: 3vh;
+animation: animate 20s infinite linear;
+
+}
+
+html{
+  height:100%; overflow:hidden;
+}
+
+

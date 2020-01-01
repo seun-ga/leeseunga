@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+ 
+ <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="%PUBLIC_URL%/fire.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="logo192.png" />
+    <link rel="apple-touch-icon" href="fire.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+		<link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+		<link href="https://fonts.googleapis.com/css?family=Baskervville|Playfair+Display&display=swap" rel="stylesheet">
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -24,22 +22,175 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+		<link rel="stylesheet" href="./index.css">
+
+	
+
+
   </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+  <body>	
+			
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+ <div id="model">
+      <script src="./three.js"></script>
+      <script src="./OrbitControls.js"></script>
+			<script src="./OBJLoader.js"></script>
+			
+			<script type="module">
+			
+			import Stats from './stats.module.js';
+		
+			//import TranslucentShader from './TranslucentShader.js';
+			
+      var container,stats;
+			var mainCamera, scene, renderer;
+			var mouse =new THREE.Vector2();
+			var windowHalfX = window.innerWidth / 2;
+			var windowHalfY = window.innerHeight / 2;
+			var object;
+			
+			var ADD = 0.01 
+			var default_value = 0;
+			var isClicked=false;
+		
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+			init();
+			animate();
 
-  </body>
+			
+		
+			function init() {
+				
+			
+				container = document.createElement( 'div' );
+				container.id="container";
+				document.body.appendChild( container );
+				//camera
+				mainCamera = new THREE.PerspectiveCamera( 25, (window.innerWidth) / (window.innerHeight), 1, 2000 );
+				mainCamera.position.set( 0, 30, 130 );
+				mainCamera.aspect = (window.innerWidth) / window.innerHeight;
+			
+
+				// scene
+				scene = new THREE.Scene();
+				scene.background=new THREE.TextureLoader().load( "./background.jpg" );
+				
+				var ambientLight = new THREE.AmbientLight( 0xcccccc, 0.6);
+				scene.add( ambientLight );
+
+				var pointLight = new THREE.PointLight( 0xffffff, 0.6 );
+				pointLight.position.set(0,300,0);
+			
+				mainCamera.add( pointLight );
+				scene.add( mainCamera );
+				
+
+				
+				// manager
+				
+				var manager = new THREE.LoadingManager( loadModel );
+				manager.onProgress = function ( item, loaded, total ) {
+					console.log( item, loaded, total );
+				};
+			
+				// texture
+				var textureLoader = new THREE.TextureLoader( manager );
+				var texture = textureLoader.load( './laptop.jpg' );
+				// model
+
+			function onProgress( xhr ) {
+					if ( xhr.lengthComputable ) {
+						var percentComplete = xhr.loaded / xhr.total * 100;
+						console.log( 'model ' + Math.round( percentComplete, 2 ) + '% downloaded' );
+						
+					}
+				}
+				function onError() {}
+				var loader = new THREE.OBJLoader( manager );
+				loader.load( './laptop.obj', function ( obj ) {
+					object = obj;
+				}, onProgress, onError );
+				//
+				async function loadModel() {
+					 object.traverse( function ( child ) {
+						if ( child.isMesh ) child.material.map = texture;
+					} );
+				
+					object.rotation.x=11;
+					object.rotation.z=-0.5;
+					object.position.y=-13;
+					object.position.x=20;
+					//object.rotation.
+					await scene.add( object );
+					
+				}
+
+				renderer = new THREE.WebGLRenderer();
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( window.innerWidth, window.innerHeight);
+			
+				container.appendChild( renderer.domElement );
+
+
+					
+				renderer.render( scene, mainCamera );
+				var controls=new THREE.OrbitControls(mainCamera,renderer.domElement);
+			
+								
+			
+				document.addEventListener( 'mousemove', onDocumentMouseMove, false );				
+				window.addEventListener( 'resize', onWindowResize, false );		
+
+				
+
+			}
+
+		
+
+			
+			function onWindowResize() {
+				windowHalfX = window.innerWidth ;
+				windowHalfY = window.innerHeight ;
+				mainCamera.aspect = windowHalfX / windowHalfY;
+				mainCamera.updateProjectionMatrix();
+			renderer.setSize( window.innerWidth, window.innerHeight );
+
+
+			}
+
+			function onDocumentMouseMove( event ) {
+				event.preventDefault();
+			
+			mouse.x = event.clientX/window.innerWidth;
+			mouse.y = event.clientY/window.innerHeight;
+			
+
+			}
+			
+			function animate() {
+				
+				renderer.clear();
+				renderer.clearDepth();
+				requestAnimationFrame( animate );
+				render();
+			
+				}
+
+			function render() {
+			
+				object.rotation.z -= 0.0005;
+				renderer.render( scene, mainCamera );
+			  
+			}
+
+  		</script>
+		</div> 
+		
+		<div id="root">
+		</div>
+ 
+	
+</body>
+	
+
 </html>

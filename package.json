@@ -1,18 +1,26 @@
 {
+  "homepage": "https://seun-ga.github.io/leeseunga.portfolio/",
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "gh-pages": "^2.1.1",
+    "node-sass": "^4.13.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.2.0",
+    "react-toolbox": "^2.0.0-beta.13",
+    "three": "^0.111.0",
+    "three-orbit-controls": "^82.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy":"npm run build",
+    "deply":"gh-pages -d build" 
   },
   "eslintConfig": {
     "extends": "react-app"
