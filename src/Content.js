@@ -51,7 +51,7 @@ class Content extends Component{
           e.preventDefault();
           this.props.previousPage();
         }.bind(this)}>
-        🔚
+       🔙
         </a>
         </div>
 

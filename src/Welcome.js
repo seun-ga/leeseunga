@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-
+import arrow from './img/arrow.png';
 
 
 
@@ -26,10 +26,10 @@ class Welcome extends Component{
        <a onClick={function(e){
          e.preventDefault();
          this.props.goHome();
-       }.bind(this)}> <div className="project"></div></a>
-     
-
-
+       }.bind(this)}> <div className="project">
+      <div className="arrow"> <img src ={arrow} ></img></div>
+      </div></a>
+    
       
        <div className="about">
        <div className="name"> Lee Seung-A</div>
