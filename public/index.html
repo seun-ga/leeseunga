@@ -43,7 +43,7 @@
 			var windowHalfX = window.innerWidth / 2;
 			var windowHalfY = window.innerHeight / 2;
 			var object;
-			var view_z=window.innerWidth/35;
+			var view_z=window.innerHeight/20;
 			var ADD = 0.01 
 			var default_value = 0;
 			var isClicked=false;
@@ -74,7 +74,7 @@
 				scene.add( ambientLight );
 
 				var pointLight = new THREE.PointLight( 0xffffff, 0.6 );
-				pointLight.position.set(0,300,0);
+				pointLight.position.set(0,200,0);
 			
 				mainCamera.add( pointLight );
 				scene.add( mainCamera );

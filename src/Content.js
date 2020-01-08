@@ -57,6 +57,15 @@ class Content extends Component{
        🔙
         </a>
       </div>
+
+      <div className="home-button">
+      
+      <a onClick={function(e){
+        e.preventDefault();
+        this.props.goWelcome();
+      }.bind(this)}>🏠</a>
+      
+      </div>
         </div>
 
         <footer className="title-down">

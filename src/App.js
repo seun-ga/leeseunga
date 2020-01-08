@@ -5,12 +5,11 @@ import Welcome from "./Welcome";
 import Content from "./Content";
 
 import MissionOffice from './img/mars.jpg';
-import MissionOffice_sub from './MissionOffice.jpg';
 import Gudpan from './img/gudpan_main.jpg';
-import Gudpan_sub from './img/gudpan_sub.jpg';
 import Overthinking from './img/overthinking_main.jpg';
-import Overthinking_sub from './img/stack.jpg';
-
+import Louis from './img/louis.jpg';
+import SighConverter from './img/sighconverter.jpg';
+import Stuck from './img/stuck.jpg';
 
 
 
@@ -46,6 +45,26 @@ class App extends Component{
         title : 'Overthinking, 3D illustration & Design, 2019',
          desc :'Participated in the album and essay book Overthinking of Cocopelli as a 3D illustration. Through the concept of protein isomer in biochemistry, overthinking was newly interpreted by tissueoffice.',
          main_photo:Overthinking
+        },
+      {
+        id:4,
+        title : 'Stuck, Openworld Game, 2018',
+         desc :'This Game is about hard life in university. Main character have to face lots of assignment, lecture, quiz to survive in the game. Situation get harder and harder. Actually lots of students in South Korea live like this, because there are too many competitions and surrounding pressure. They get stressed a lot from study, but they have to get through all obstacles to get success. We wanted to make player stressful from experiencing this life, but in more enjoyable way.',
+         main_photo:Stuck
+
+        },
+      {
+        id:5,
+        title : 'LOUIS, speculative product, 2017',
+          desc :'Louis produced the personalized chips based on the questionnaire received from customer Y, and added them to "The Memory" Each time a button is pressed, the chips turn on the rotating and touch the wrist with a smooth feeling or pain.',
+          main_photo:Louis
+
+        },
+      {
+        id:6,
+        title : 'Sigh converter, speculative product, 2017',
+          desc :'  This device is for person in hard mental condition. When user sigh, the fan operates and fill the mask with selected scent. User can inhale the scent and relax.',
+          main_photo:SighConverter
         }
     ]
     
@@ -110,8 +129,13 @@ class App extends Component{
               })}else{this.setState({selected_content_id:this.state.category.length})
               }       
             }.bind(this)
-          }       
-            >
+          }
+          goWelcome={
+            function(){
+              this.setState({
+                mode: 'welcome' ,
+              selected_content_id:1 })
+            }.bind(this)}          
         >
       </Content>
       
@@ -123,12 +147,7 @@ class App extends Component{
               mode: 'home' ,
             selected_content_id:1})
           }.bind(this)}
-        goWelcome={
-          function(){
-            this.setState({
-              mode: 'welcome' ,
-            selected_content_id:1         })
-          }.bind(this)}>
+        >
       </Welcome> 
       
       </div>
