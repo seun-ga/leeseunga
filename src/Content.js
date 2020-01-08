@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
-import NextButton from './next_icon.png';
-import PreviousButton from './previous_icon.png';
+import NextButton from './next_icon.jpg';
+import PreviousButton from './previous_icon.jpg';
 
 
 class Content extends Component{
@@ -11,24 +11,27 @@ class Content extends Component{
     
       return(
         <div>
-        <div className="title-up">
+        <header className="title-up">
         <div>
         <span> {title} </span> {title} <span> {title} </span>
         </div>
         <div>
         <span> {title} </span> {title} <span> {title} </span>
         </div>
-        </div>
+        </header>
         
       <div className="wrapper">
-       
+     
         <div className="main-image">
-        <img src={this.props.main_photo} />
+      
+        <img src={this.props.main_photo}/>
+
         </div>
       
         <div className="contents-wrapper">
-        <div className="sub-image">
-        <img src={this.props.sub_photo} />
+
+        <div className="desc-title">
+          {this.props.title}    
         </div>
         <div className="desc-detail">
           {this.props.desc}    
@@ -55,14 +58,14 @@ class Content extends Component{
         </a>
         </div>
 
-        <div className="title-down">
+        <footer className="title-down">
         <div>
         <span> {title} </span> {title} <span> {title} </span>
         </div>
         <div>
         <span> {title} </span> {title} <span> {title} </span>
         </div>
-        </div>
+        </footer>
 
         </div>);
     }else{

@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import arrow from './img/arrow.png';
+import arrow from './img/arrow.jpg';
 
 
 
