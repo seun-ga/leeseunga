@@ -38,7 +38,7 @@ class Content extends Component{
         </div>
         </div>
       </div>
-     
+     <div>
         <div className="nextButton">
         <a onClick={function(e){
                     e.preventDefault();
@@ -56,6 +56,7 @@ class Content extends Component{
         }.bind(this)}>
        🔙
         </a>
+      </div>
         </div>
 
         <footer className="title-down">

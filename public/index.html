@@ -24,8 +24,6 @@
     -->
 		<link rel="stylesheet" href="./index.css">
 
-	
-
 
   </head>
   <body>	
@@ -37,18 +35,15 @@
 			<script src="./OBJLoader.js"></script>
 			
 			<script type="module">
-			
-			import Stats from './stats.module.js';
-		
-			//import TranslucentShader from './TranslucentShader.js';
-			
+			//router를 통한 제어, render내부에 로직 없애기
+
       var container,stats;
 			var mainCamera, scene, renderer;
 			var mouse =new THREE.Vector2();
 			var windowHalfX = window.innerWidth / 2;
 			var windowHalfY = window.innerHeight / 2;
 			var object;
-			
+			var view_z=window.innerWidth/35;
 			var ADD = 0.01 
 			var default_value = 0;
 			var isClicked=false;
@@ -57,7 +52,7 @@
 			init();
 			animate();
 
-			
+	
 		
 			function init() {
 				
@@ -67,7 +62,7 @@
 				document.body.appendChild( container );
 				//camera
 				mainCamera = new THREE.PerspectiveCamera( 25, (window.innerWidth) / (window.innerHeight), 1, 2000 );
-				mainCamera.position.set( 0, 30, 130 );
+				mainCamera.position.set( 0, 30, view_z );
 				mainCamera.aspect = (window.innerWidth) / window.innerHeight;
 			
 
@@ -119,7 +114,7 @@
 					object.rotation.x=11;
 					object.rotation.z=-0.5;
 					object.position.y=-13;
-					object.position.x=20;
+					object.position.x=0;
 					//object.rotation.
 					await scene.add( object );
 					
@@ -187,15 +182,12 @@
 		</div> 
 		
 		<div id="root">
-			<img src='../src/img/mars.png' width="1", height="1">
-			<img src='../src/MissionOffice.png' width="1", height="1">
-			<img src='../src/img/gudpan_main.png' width="1", height="1">
-			<img src='../src/img/gudpan_sub.png' width="1", height="1">
-			<img src='../src/img/overthinking_main.jpg' width="1", height="1">
-			<img src='../src/img/stack.jpg' width="1", height="1">
+
+
 
 		</div>
- 
+<!--  lazy loading(react library)
+--> 
 	
 </body>
 	
