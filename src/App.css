@@ -358,8 +358,8 @@ img{
   background-color: white;
   position: absolute;
   left: 0%;
-  bottom:9%;
-  top:9%;
+  bottom:0%;
+  top:6%;
   right: 0%;
   font-size: 0;
   display: flex;
@@ -407,7 +407,7 @@ img{
     position: absolute;
    right:10%;
    left:80%;
-   bottom: 11%;
+   bottom: 1%;
   }
   .previousButton{
     font-size: 8vw;
@@ -415,14 +415,14 @@ img{
     display: inline-block;
     left:10%;
     right:80%;
-    bottom: 11%;
+    bottom: 1%;
   }
   .home-button{
     position: absolute;
     
     right: 50%;
     left:47%;
-    bottom: 11.5%;
+    bottom: 1.5%;
     font-size: 8vw;
     color : white;
     display: block;
@@ -431,6 +431,11 @@ img{
     font-kerning: auto;
     word-break: normal;
   }
-  
+  .title-up div{
+    font-size: 3vh;
+  }
+  .title-down div{
+   display: none;
+  }
   
 }
