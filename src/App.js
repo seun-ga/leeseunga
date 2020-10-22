@@ -53,15 +53,9 @@ class App extends Component{
          main_photo:Stuck
 
         },
+      
       {
         id:5,
-        title : 'LOUIS, speculative product, 2017',
-          desc :'Louis produced the personalized chips based on the questionnaire received from customer Y, and added them to "The Memory" Each time a button is pressed, the chips turn on the rotating and touch the wrist with a smooth feeling or pain.',
-          main_photo:Louis
-
-        },
-      {
-        id:6,
         title : 'Sigh converter, speculative product, 2017',
           desc :'  This device is for person in hard mental condition. When user sigh, the fan operates and fill the mask with selected scent. User can inhale the scent and relax.',
           main_photo:SighConverter
@@ -73,6 +67,13 @@ class App extends Component{
   
   render(){
     //new CircleType(document.getElementById('circle_text'));
+    // {
+    //   id:5,
+    //   title : 'LOUIS, speculative product, 2017',
+    //     desc :'Louis produced the personalized chips based on the questionnaire received from customer Y, and added them to "The Memory" Each time a button is pressed, the chips turn on the rotating and touch the wrist with a smooth feeling or pain.',
+    //     main_photo:Louis
+
+    //   },
     var _descDetail,_descTitle,_main_photo= null;
     var _data=[];
     var _inHome=false;
@@ -83,12 +84,11 @@ class App extends Component{
       
     }else if (this.state.mode=='home'){
       var i=0;
-     
       _inHome=true;
       _data=this.state.category;
       //_deskTitle과 _deskDetail에 정보를 채워넣음
       while(i<this.state.category.length){
-      var selectedData=this.state.category[i];
+       var selectedData=this.state.category[i];
      // var selectedphotoId=this.state.selected_photo_id;
       if(selectedData.id==this.state.selected_content_id){
       _descTitle=selectedData.title;

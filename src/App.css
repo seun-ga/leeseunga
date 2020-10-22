@@ -322,7 +322,7 @@ display: inline-block;
     display: inline-block;
     text-align: center;
     left: 5%;
-    top: 10%;
+    top: 9%;
     right: 5%;
     bottom: 0%;
     font-size: 2.5vh;
@@ -374,7 +374,8 @@ img{
   display: inline-block;
    width: auto;
    min-height: 30%;
-   padding: 20px;
+   padding-left: 20px;
+   padding-top:10px; 
    
     color : black;
     font-family: 'Times New Roman', Times, serif;
@@ -432,7 +433,9 @@ img{
     word-break: normal;
   }
   .title-up div{
-    font-size: 3vh;
+    font-size: 2.5vh;
+   
+  
   }
   .title-down div{
    display: none;
